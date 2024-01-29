@@ -37,7 +37,7 @@ jobs:
       - name: Build
         run: npm run build -- -c production --base-href "https://janbBodenmann.github.io/Angular1/"
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
            path: dist/angular_project/browser/
   
