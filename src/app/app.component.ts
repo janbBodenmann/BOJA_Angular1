@@ -1,15 +1,22 @@
+// app.component.ts
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ExampleComponent } from './example/example.component';
-import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ExampleComponent, SharedModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <div>
+      <h1>Meine Webseite</h1>
+      <nav>
+        <a routerLink="/home">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/contact">Contact</a>
+      </nav>
+    </div>
+
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent {
-  title = 'BOJA_Angular';
+  title = 'meine-webseite';
 }
